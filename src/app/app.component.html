@@ -1,0 +1,25 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span class="pl-5">Chơi thôi</span>
+  <div class="spacer"></div>
+</div>
+
+<div class="content" role="main">
+  <div class="d-flex flex-column">
+    <div class="d-flex flex-column">
+      <label for="project-prefix">Project Prefix. EG: FTD</label>
+      <input id="project-prefix" class="form-control" type="text" [(ngModel)]="projectPrefix" />
+      <br/>
+      <label for="default-link">Repo Pull Requests URL. Eg: https://bitbucket.org/est-rouge/ftd-admin-console/pull-requests/</label>
+      <input id="default-link" class="form-control" type="text" [(ngModel)]="bitBucketRepoLink" />
+    </div>
+    <div class="d-flex justify-content-between align-items-start mt-3">
+      <textarea class="form-control" name="source" cols="2000" rows="30" [(ngModel)]="source"></textarea>
+      <button class="btn btn-primary mx-3" style="height: 35px;" (click)="convert(source)">Convert</button>
+      <textarea class="form-control" name="result" cols="2000" rows="30" [(ngModel)]="result"></textarea>
+    </div>
+  </div>
+  <!-- Footer -->
+  <!--  <footer></footer>-->
+</div>
+<!--<router-outlet></router-outlet>-->
